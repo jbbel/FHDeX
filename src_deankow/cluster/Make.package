@@ -1,0 +1,10 @@
+CEXE_sources += main.cpp
+CEXE_sources += CGTable.cpp
+CEXE_sources += CGModel.cpp
+CEXE_sources += ClusterPC.cpp
+CEXE_sources += ClusterDriver.cpp
+
+CEXE_headers += CGTable.H
+CEXE_headers += CGModel.H
+CEXE_headers += ClusterPC.H
+CEXE_headers += ClusterDriver.H

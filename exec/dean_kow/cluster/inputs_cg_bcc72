@@ -1,0 +1,22 @@
+# the perfect 432-site bcc crystal at D = 0.30: static test (forces and mu spread must vanish)
+diff_coeff = 0.30
+num_part = 20971520
+dorand = 0
+stop_time = 0.01
+max_step = 100000
+
+amr.n_cell = 128 128 128
+amr.max_grid_size = 128
+amr.ip_eps = 4509.
+amr.ip_R = 0.1
+amr.ip_alpha = 3.
+amr.plot_int = -1
+
+cg.lattice = bcc72
+cg.dt = 5.e-5
+cg.out_dt = 0.001
+cg.out_dir = out_bcc72
+cg.fs = 0.28
+cg.gamma = 0.3
+cg.b0 = 6.
+cg.table_file = wtable_gema.bin

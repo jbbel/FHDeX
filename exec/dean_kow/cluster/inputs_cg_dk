@@ -1,0 +1,30 @@
+# continuation of a DK run from a cluster_diagnostics_3d.py frame (290_c: step 181000, t 0.1095)
+diff_coeff = 0.290
+num_part = 20971520
+dorand = 0
+stop_time = 1.0
+max_step = 10000000
+
+amr.n_cell = 128 128 128
+amr.max_grid_size = 128
+amr.ip_eps = 4509.
+amr.ip_R = 0.1
+amr.ip_alpha = 3.
+amr.plot_int = -1
+amr.plot_dt = 0.1
+amr.plot_file = plt_cg_290_c_
+amr.check_int = -1
+
+cg.init_file = ../interaction/gema_patterns/data_det/diag_new_scan_290_c_det/all/clusters.txt
+cg.init_step = 181000
+cg.dt = 5.e-5
+cg.out_dt = 0.005
+cg.out_dir = out_290_c
+cg.fs = 0.28
+cg.gamma = 0.3
+cg.b0 = 6.
+cg.m_min = 7.e-5
+cg.merge_frac = 0.5
+cg.merge_rmax = 0.08
+cg.barrier_min = 0.5
+cg.table_file = wtable_gema.bin

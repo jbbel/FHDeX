@@ -1,0 +1,27 @@
+AMREX_HOME ?= /path/to/amrex
+
+EBASE := main
+
+BL_NO_FORT = TRUE
+
+include $(AMREX_HOME)/Tools/GNUMake/Make.defs
+
+SRC_DIR = ../../../src_deankow/cluster
+# Potentials.H (interaction potential and its amr.ip_* parameters) is shared with the DK code
+POT_DIR = ../../../src_deankow/interaction
+
+include $(SRC_DIR)/Make.package
+INCLUDE_LOCATIONS += $(SRC_DIR) $(POT_DIR)
+VPATH_LOCATIONS   += $(SRC_DIR) $(POT_DIR)
+
+Pdirs 	:= Base Boundary AmrCore Particle
+Ppack	+= $(foreach dir, $(Pdirs), $(AMREX_HOME)/Src/$(dir)/Make.package)
+include $(Ppack)
+
+all: $(executable)
+	@echo SUCCESS
+
+include $(AMREX_HOME)/Tools/GNUMake/Make.rules
+
+MAXSPECIES := $(strip $(MAX_SPEC))
+DEFINES += -DMAX_SPECIES=$(MAXSPECIES)

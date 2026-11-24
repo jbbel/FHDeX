@@ -1,0 +1,17 @@
+# A/B test against the prototype: same text state, 100+ steps, deterministic
+diff_coeff = 0.290
+num_part = 20971520
+dorand = 0
+stop_time = 0.1145
+amr.ip_eps = 4509.
+amr.ip_R = 0.1
+amr.ip_alpha = 3.
+amr.plot_int = -1
+cg.init_state = ../interaction/gema_patterns/runs_cg/ab/init_290_c.txt
+cg.dt = 5.e-5
+cg.out_dt = 0.001
+cg.out_dir = ../interaction/gema_patterns/runs_cg/ab/cpp
+cg.fs = 0.28
+cg.gamma = 0.3
+cg.b0 = 6.
+cg.table_file = wtable_gema.bin
